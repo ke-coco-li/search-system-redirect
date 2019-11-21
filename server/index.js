@@ -7,7 +7,7 @@ let userNum = 0;
 
 app.get("/", (req, res) => {
     userNum += 1;
-    res.send(JSON.stringify({ number: userNum % 2 }));   
+    res.send(JSON.parse.stringify({ number: userNum % 2 }));   
 });
 
 app.listen(3030, () => console.log("listening"))
