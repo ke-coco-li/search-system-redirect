@@ -5,7 +5,7 @@ app.use(cors());
 
 let userNum = 0;
 
-app.get("/", (req, res) => {
+app.get("/redirect.html", (req, res) => {
     userNum += 1;
     res.send(JSON.parse.stringify({ number: userNum % 2 }));   
 });

@@ -11,8 +11,9 @@
 </html>
 
 <script>
-    fetch("https://kel28-1738185.github.io/search-system-redirect/redirect.html")
+    fetch("/redirect.html")
     .then((res) => {
+        console.log(res.text())
         return res.json();
     })
     .then((data) => {
