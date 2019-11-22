@@ -3,11 +3,13 @@ const cors = require('cors');
 
 app.use(cors());
 
+let PORT = process.env.PORT || 3030;
+
 let userNum = 0;
 
-app.get("/search-system-redirect/redirect", (req, res) => {
+app.get("/", (req, res) => {
     userNum += 1;
-    res.send(JSON.parse.stringify({ number: userNum % 2 }));   
+    res.send(JSON.stringify({ number: userNum % 2 }));
 });
 
-app.listen(3030, () => console.log("listening"))
+app.listen(PORT, () => console.log("listening"))
